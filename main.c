@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
-int		ft_atoi(char *str);
+#include "rush01.h"
 
 int	check_input(char *str, int *input)
 {
@@ -46,15 +45,15 @@ int	main(int argc, char *argv[])
 		ft_putstr("Error\n");
 		return (1);
 	}
-//	if (solve(grid, input, 0, 0)) //function to see if solution exists
-//		print_grid (grid); //if solution found, print grid
-//	else		
-//		ft_pustr ("Error\n");
-    	for (int i = 0; i < 16; i++) //loop to print input back;
-    	{
-        	printf("%d ", input[i]);
-    	}
-    	printf("\n");	
+	if (solve_puzzle(grid, input, 0, 0)) //function to see if solution exists
+		print_grid (grid); //if solution found, print grid
+	else		
+		ft_putstr ("Error\n");
+   // 	for (int i = 0; i < 16; i++) //loop to print input back;
+  //  	{
+ //       	printf("%d ", input[i]);
+//    	}
+//    	printf("\n");	
 	return (0);
 }
 /*
