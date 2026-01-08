@@ -39,6 +39,20 @@ int	main(int argc, char **argv)
 {
 	int	grid[4][4];
 	int	input[16];
+	int	i;
+	int j;
+
+	j = 0;
+	while (j < 4)
+	{
+		int = 0;
+		while (i < 4)
+		{
+			grid[j][i] = 0;
+			i++;
+		}
+		j++;
+	}
 
 	if (argc != 2 || !validate_input(argv[1], input))
 	{
@@ -50,7 +64,5 @@ int	main(int argc, char **argv)
 		ft_putstr("Error\n");
 		return (1);
 	}
-	if (solve_grid(grid, input, 0, 0))
-		print_grid(grid);
 	return (0);
 }
